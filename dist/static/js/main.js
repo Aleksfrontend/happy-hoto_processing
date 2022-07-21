@@ -8,7 +8,7 @@ if (animItems.length > 0) {
       var animItem = animItems[index];
       var animItemHeight = animItem.offsetHeight;
       var animItemOffset = offset(animItem).top;
-      var animStart = 20;
+      var animStart = 50;
       var animItemPoint = window.innerHeight - animItemHeight / animStart;
 
       if (animItemHeight > window.innerHeight) {
@@ -36,7 +36,5 @@ if (animItems.length > 0) {
   };
 
   window.addEventListener('scroll', animOnScroll);
-  setTimeout(function () {
-    animOnScroll();
-  }, 300);
+  animOnScroll();
 }
